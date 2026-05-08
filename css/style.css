@@ -1,4 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+}
+
+:root {
+    /* Cores - Modo Claro */
+    --bg-color: #F9F9F9; /* Fundo da página (body) */
+    --text-color: #1E1E1E; /* Texto padrão */
+    --primary-color: #0077CC; /* Cor principal (botões, links) */
+    --card-bg: #FFFFFF; /* Fundo do card/caixa */
+    --hover-color: #005FA3; /* Hover em links/botões */
+    --border-color: #E0E0E0; /* Bordas e divisores */
+
+    /* Cores - Modo Escuro */
+    --dark-bg-color: #1E1E1E; /* Fundo da página (body) */
+    --dark-text-color: #F9F9F9; /* Texto claro (padrão) */
+    --dark-primary-color: #4DA6FF; /* Cor principal (botões, links) */
+    --dark-card-bg: #2C2C2C; /* Fundo do card/caixa */
+    --dark-hover-color: #66BFFF; /* Hover em links/botões */
+    --dark-border-color: #444444; /* Bordas e divisores */
+
+    /* Tipografia */
+    --font-heading: 'Poppins', sans-serif; /* Títulos (h1, h2, h3...) */
+    --font-body: 'Inter', sans-serif; /* Corpo de texto padrão */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 5rem;
+    height: 5rem;
 }
