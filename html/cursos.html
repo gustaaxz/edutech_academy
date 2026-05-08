@@ -3,25 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>EduTech Academy</title>
 </head>
 <body>
     <header>
-        <section id="">
-
+        <section id="header">
+            <h1 class="logo">EduTech Academy</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html" class="button-menu">Home</a></li>
+                    <li><a href="/html/cursos.html" class="button-menu">Cursos</a></li>
+                    <li><a href="#" class="button-menu">Matrícula</a></li>
+                    <li><a href="#" class="button-menu">Sobre</a></li>
+                    <li><button id="theme-toggle" aria-label="Alternar tema"><img src="/assets/sun.svg" alt="Alternar tema" width="24" height="24"></button></li>
+                </ul>
+            </nav>
         </section>
     </header>
     <main>
-        <section id="">
-            
+        <section id="head-top">
+            <h2 class="header-title">Nossos cursos</h2>
+            <p class="header-subtitle">Conheça os cursos disponíveis na EduTech Academy e encontre o melhor para o seu futuro profissional.</p>
+        </section>
+        <section id="courses">
+            <div class="fullstack-course">
+                <h2 class="course-title">Desenvolvimento Web Fullstack</h2>
+                <h3 class="course-time">📘 120 horas</h3>
+                <h3 class="course-local">🖥 EAD</h3>
+                <button href="/html/curso-web.html" type="button">Ver detalhes</button>
+            </div>
+            <div class="data-science">
+                <h2 class="course-title">Data Science & Machine Learning</h2>
+                <h3 class="course-time">📘 100 horas</h3>
+                <h3 class="course-local">🏫 Presencial</h3>
+                <button href="/html/curso-datascience.html" type="button">Ver detalhes</button>
+            </div>
+            <div class="digital-marketing">
+                <h2 class="course-title">Marketing Digital & SEO</h2>
+                <h3 class="course-time">📘 80 horas</h3>
+                <h3 class="course-local">🖥 EAD</h3>
+                <button href="/html/curso-marketing.html" type="button">Ver detalhes</button>
+            </div>
+            <div class="uiux-design">
+                <h2 class="course-title">UI/UX Design</h2>
+                <h3 class="course-time">📘 90 horas</h3>
+                <h3 class="course-local">🏫 Presencial</h3>
+                <button href="html/curso-uiux.html" type="button">Ver detalhes</button>
+            </div>
         </section>
     </main>
     <footer>
-        <section id="">
+        <section id="info-footer">
+            <div class="top-footer">
+                <h2 class="footer-title">EduTech Academy</h2>
+                <p class="footer-subtitle">Transformando carreiras através da educação de qualidade desde 2010.</p>
+            </div>
             
+            <div class="footer-contact">
+                <p id="footer-phone">📞 (11) 99999-9999</p>
+                <p id="footer-email">✉ contato@edutechacademy.com.br</p>
+                <p id="footer-local">📍 Av. Paulista, 1000 – São Paulo/SP</p>
+            </div>
+            <div class="social-medias">
+                <p class="social-media">Facebook</p>
+                <p class="social-media">Instagram</p>
+                <p class="social-media">Twitter</p>
+                <p class="social-media">Linkedin</p>
+            </div>
+            <div class="copyright">
+                <p id="footer-copyright">© 2025 EduTech Academy. Todos os direitos reservados.</p>
+            </div>
         </section>
     </footer>
-    <script href="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
