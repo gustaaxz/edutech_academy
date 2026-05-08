@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Poppins";
 }
 
 :root {
@@ -27,11 +28,100 @@
     --font-body: 'Inter', sans-serif; /* Corpo de texto padrão */
 }
 
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-img {
-    width: 5rem;
-    height: 5rem;
+#header {
+    display: flex;
+    flex-direction: row;
+    color: #2563eb;
+    justify-content: space-between;
+    padding: 0.5rem 0 0.5rem 0;
 }
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem
+}
+
+#head-title {
+    font-size: 1rem;
+}
+
+.menu {
+    display: none;
+}
+
+#logo-image {
+    max-width: 1.875rem;
+}
+
+#horizontal-line {
+    border: none;
+    height: 1px;
+    background-color: var(--bg-color)
+}
+
+.header-title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0;
+    line-height: 2.15rem;
+    color: var(--text-color);
+}
+
+.header-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #908CA3;
+    padding: 0 2rem 3rem 2rem;
+    font-family: "Inter";
+}
+
+#section-title {
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.course-image {
+    max-width: 100%;
+    border: none;
+    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+}
+
+#fullstack-course, #data-science, #digital-marketing, #uiux-design {
+    border: solid 2px #eee;
+    border-radius: 0.4rem;
+}
+
+#fullstack-course a, #data-science a, #digital-marketing a, #uiux-design a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+    background-color: #ddd;
+    justify-self: center;
+    width: 18rem;
+    /* Continuar a fazer os botões "Ver detalhes" em casa*/
+}
+
+#courses {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.course-title {
+    font-size: 1rem;
+}
+
+/* Continuar a fazer em casa (08/05/2026) */
