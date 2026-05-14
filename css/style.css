@@ -402,6 +402,12 @@ body > #theme-toggle img {
     background-color: #f9f9f9;
 }
 
+#head-top > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
 @media (min-width: 768px){
     div#courses {
         display: grid;
@@ -493,18 +499,36 @@ body > #theme-toggle img {
     }
     body:has(.uiux-course) main > #horizontal-line {
         grid-column: 1 / -1;
+        grid-row: 1;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
     }
     body:has(.uiux-course) main > #head-top {
+        display: contents;
+    }
+    body:has(.uiux-course) main > #head-top > .back-button {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-top: 1.75rem;
+        justify-self: start;
+    }
+    body:has(.uiux-course) main > #head-top > img {
         grid-column: 1;
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        grid-row: 3;
+        height: 380px;
+    }
+    body:has(.uiux-course) main > #head-top > .course-informations {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    body:has(.uiux-course) main > #head-top > .what-studies {
+        grid-column: 1;
+        grid-row: 5;
     }
     body:has(.uiux-course) main > .uiux-course {
         grid-column: 2;
-        margin: 1.75rem 0 5rem 0;
+        grid-row: 3 / span 3;
+        margin: 0 0 5rem 0;
     }
 
     /* Footer Layout */
