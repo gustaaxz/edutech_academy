@@ -401,3 +401,129 @@ body > #theme-toggle img {
 .course-button.secondary:hover {
     background-color: #f9f9f9;
 }
+
+@media (min-width: 768px){
+    div#courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px){
+    /* Header & Menu Nav */
+    .menu {
+        display: block;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+    }
+    .button-menu {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+    }
+    .button-menu:hover {
+        color: var(--primary-color);
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    .menu ul li button#theme-toggle {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    body > #theme-toggle {
+        display: none;
+    }
+
+    /* Courses Grid */
+    div#courses {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #fullstack-course a, #data-science a, #digital-marketing a, #uiux-design a {
+        width: 80%;
+    }
+
+    /* Home Layout (Matrícula + Sidebar) */
+    body:has(#matriculation) main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0 3rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    body:has(#matriculation) main > #horizontal-line {
+        grid-column: 1 / -1;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+    }
+    body:has(#matriculation) main > #head-top,
+    body:has(#matriculation) main > section#courses {
+        grid-column: 1 / -1;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    body:has(#matriculation) main > #matriculation {
+        grid-column: 1;
+        max-width: 100%;
+        margin: 1rem 0 5rem 0;
+    }
+    body:has(#matriculation) main > #sidebar {
+        grid-column: 2;
+        margin: 3rem 0 5rem 0;
+    }
+
+    /* Course Internal Pages Layout */
+    body:has(.uiux-course) main {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 0 3rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    body:has(.uiux-course) main > #horizontal-line {
+        grid-column: 1 / -1;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+    }
+    body:has(.uiux-course) main > #head-top {
+        grid-column: 1;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    body:has(.uiux-course) main > .uiux-course {
+        grid-column: 2;
+        margin: 1.75rem 0 5rem 0;
+    }
+
+    /* Footer Layout */
+    #info-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        text-align: left;
+    }
+    #top-footer, #footer-contact, #social-medias {
+        padding-bottom: 0;
+    }
+    .medias {
+        justify-content: flex-start;
+    }
+    #soft-horizontal-line, #copyright {
+        grid-column: 1 / -1;
+    }
+    #copyright {
+        text-align: center;
+    }
+}
