@@ -16,7 +16,7 @@
     --border-color: #E0E0E0; /* Bordas e divisores */
 
     /* Cores - Modo Escuro */
-    --dark-bg-color: #1E1E1E; /* Fundo da página (body) */
+    --dark-bg-color: #020817; /* Fundo da página (body) */
     --dark-text-color: #F9F9F9; /* Texto claro (padrão) */
     --dark-primary-color: #4DA6FF; /* Cor principal (botões, links) */
     --dark-card-bg: #2C2C2C; /* Fundo do card/caixa */
@@ -26,6 +26,23 @@
     /* Tipografia */
     --font-heading: 'Poppins', sans-serif; /* Títulos (h1, h2, h3...) */
     --font-body: 'Inter', sans-serif; /* Corpo de texto padrão */
+}
+
+/* Configuração base do body para usar as variáveis e ter transição suave */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Quando o body tiver a classe modo-escuro, trocamos os valores das variáveis */
+body.modo-escuro {
+    --bg-color: var(--dark-bg-color);
+    --text-color: var(--dark-text-color);
+    --primary-color: var(--dark-primary-color);
+    --card-bg: var(--dark-card-bg);
+    --hover-color: var(--dark-hover-color);
+    --border-color: var(--dark-border-color);
 }
 
 .container {
@@ -103,7 +120,7 @@ html {
 }
 
 #fullstack-course, #data-science, #digital-marketing, #uiux-design {
-    border: solid 2px #eee;
+    border: solid 2px var(--border-color);
     border-radius: 0.4rem;
 }
 
@@ -118,7 +135,7 @@ html {
     justify-self: center;
     width: 18rem;
     color: white;
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     text-decoration: none;
     border-radius: 0.25rem;
 }
@@ -148,7 +165,7 @@ html {
 #matriculation-form {
     display: flex;
     flex-direction: column;
-    border: solid 2px #eee;
+    border: solid 2px var(--border-color);
     border-radius: 0.4rem;
     padding: 1rem;
     gap: 1rem;
@@ -162,13 +179,14 @@ html {
 
 .input-placeholder {
     padding: 0.5rem;
-    border: 2px solid #eee;
+    border: 2px solid var(--border-color);
     border-radius: 0.4rem;
+    background-color: var(--bg-color);
 }
 
 #submit-button {
     border: none;
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 0.25rem;
     padding: 0.4rem 0 0.4rem 0;
@@ -181,7 +199,7 @@ html {
 #sidebar {
     display: flex;
     flex-direction: column;
-    border: solid 2px #eee;
+    border: solid 2px var(--border-color);
     border-radius: 0.4rem;
     padding: 1.5rem;
     margin: 5rem 1.25rem 0 1.25rem;
@@ -264,7 +282,7 @@ body > #theme-toggle {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 0.5rem;
     width: 2.5rem;
@@ -286,18 +304,18 @@ body > #theme-toggle img {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     border-radius: 0.25rem;
-    background-color: #fff;
+    background-color: var(--bg-color);
     text-decoration: none;
-    color: #1E1E1E;
+    color: var(--text-color);
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
 
 .back-button:hover {
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
 }
 
 .course-informations {
@@ -331,12 +349,12 @@ body > #theme-toggle img {
 .uiux-course {
     display: flex;
     flex-direction: column;
-    border: solid 1px #eee;
+    border: solid 1px var(--border-color);
     border-radius: 0.5rem;
     margin: 0 1.4rem 5rem 1.4rem;
     padding: 1.5rem;
     gap: 1.25rem;
-    background-color: #fff;
+    background-color: var(--bg-color);
 }
 
 .course-icon {
@@ -356,14 +374,14 @@ body > #theme-toggle img {
 
 .course-information {
     font-family: "Inter", sans-serif;
-    color: #888;
+    color: var(--text-color);
     font-size: 0.8rem;
     font-weight: 500;
 }
 
 .course-subscription {
     font-family: "Inter", sans-serif;
-    color: #1E1E1E;
+    color:  var(--text-color);
     font-size: 1rem;
     font-weight: 500;
     margin-top: 0.2rem;
@@ -383,7 +401,7 @@ body > #theme-toggle img {
 }
 
 .course-button.primary {
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
 }
@@ -395,7 +413,7 @@ body > #theme-toggle img {
 .course-button.secondary {
     background-color: #fff;
     color: #1E1E1E;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
 }
 
 .course-button.secondary:hover {
