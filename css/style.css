@@ -339,6 +339,10 @@ body > #theme-toggle img {
     background-color: #fff;
 }
 
+.course-icon {
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(199deg) brightness(111%) contrast(101%);
+}
+
 .course-detail-row {
     display: flex;
     align-items: center;

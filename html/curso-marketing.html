@@ -8,11 +8,17 @@
 </head>
 <body>
     <header>
-        <section id="header">
-            <h1 class="logo"><img src="/assets/logo.svg" alt="Logo EduTech" width="24" height="24"> EduTech Academy</h1>
+        <section id="header" class="container">
+            <div class="head">
+                <img id="logo-image" src="/assets/logo.svg" alt="Logo da EduTech Academy">
+                <h1 id="head-title">EduTech Academy</h1>
+            </div>
+            <button id="mobile-menu-btn" class="hamburger-menu" aria-label="Abrir menu" style="background: transparent; border: none; cursor: pointer;">
+                <img src="/assets/menu.svg" alt="Menu" width="32" height="32">
+            </button>
             <nav class="menu">
                 <ul>
-                    <li><a href="/index.html" class="button-menu">Home</a></li>
+                    <li><a href="index.html" class="button-menu">Home</a></li>
                     <li><a href="/html/cursos.html" class="button-menu">Cursos</a></li>
                     <li><a href="/index.html#matriculation" class="button-menu">Matrícula</a></li>
                     <li><a href="#" class="button-menu">Sobre</a></li>
@@ -22,16 +28,18 @@
         </section>
     </header>
     <main>
-        <section id="head-top">
+        <hr id="horizontal-line">
+        <section id="head-top" class="container">
             <a href="cursos.html" class="back-button">
                 <img src="/assets/arrow-left.svg" alt="Voltar" width="16" height="16"> Voltar para Cursos
             </a>
-            <h2 class="header-title">Marketing Digital & SEO</h2>
-            <p class="header-subtitle">Aprenda estratégias eficazes de marketing digital e otimização para
-                                       mecanismos de busca. O curso inclui Google Analytics, SEO técnico, marketing
-                                       de conteúdo e estratégias de mídia social para aumentar a visibilidade online.</p>
+            <img src="/assets/marketing.jpg" alt="Marketing Digital & SEO" style="border-radius: 0.75rem; max-width: 100%;">
+            <div class="course-informations">
+                <h2 class="h2-title">Marketing Digital & SEO</h2>
+                <p class="p-subtitle">Aprenda estratégias eficazes de marketing digital e otimização para mecanismos de busca. O curso inclui Google Analytics, SEO técnico, marketing de conteúdo e estratégias de mídia social para aumentar a visibilidade online.</p>
+            </div>
             <div class="what-studies">
-                <h2 class="what-title">O que você vai aprender:</h2>
+                <h2 class="what-title">O que você vai aprender</h2>
                 <ul>
                     <li class="techniques">Fundamentos teóricos e práticos essenciais</li>
                     <li class="techniques">Tecnologias e ferramentas atuais do mercado</li>
@@ -41,40 +49,79 @@
                 </ul>
             </div>
         </section>
-        <div class="fullstack-course">
-           <h3 class="course-time">📘 80 horas</h3>
-           <h3 class="course-local">🖥 EAD</h3>
-           <h3 class="course-students">👥 Alunos Matriculados: 380</h3>
-           <h3 class="course-modules">📚 Módulos: 6</h3>
-           <h3 class="next-class">📅 Próxima Turma: 20 de Abril, 2025</h3>
-           <button href="#" type="button">Inscrever-se Agora</button>
-           <button href="#" type="button">Solicitar Mais Informações</button>
+        <div class="uiux-course">
+            <div class="course-detail-row">
+                <img class="course-icon" src="/assets/clock.svg" alt="Carga Horária" width="20" height="20">
+                <div class="course-detail-text">
+                    <p class="course-information">Carga Horária</p>
+                    <p class="course-subscription">80 horas</p>
+                </div>
+            </div>
+            <div class="course-detail-row">
+                <img class="course-icon" src="/assets/map-pin.svg" alt="Modalidade" width="20" height="20">
+                <div class="course-detail-text">
+                    <p class="course-information">Modalidade</p>
+                    <p class="course-subscription">EAD</p>
+                </div>
+            </div>
+            <div class="course-detail-row">
+                <img class="course-icon" src="/assets/users.svg" alt="Alunos Matriculados" width="20" height="20">
+                <div class="course-detail-text">
+                    <p class="course-information">Alunos Matriculados</p>
+                    <p class="course-subscription">380</p>
+                </div>
+            </div>
+            <div class="course-detail-row">
+                <img class="course-icon" src="/assets/book.svg" alt="Módulos" width="20" height="20">
+                <div class="course-detail-text">
+                    <p class="course-information">Módulos</p>
+                    <p class="course-subscription">6</p>
+                </div>
+            </div>
+            <div class="course-detail-row">
+                <img class="course-icon" src="/assets/calendar-clock.svg" alt="Próxima Turma" width="20" height="20">
+                <div class="course-detail-text">
+                    <p class="course-information">Próxima Turma</p>
+                    <p class="course-subscription">20 de Abril, 2025</p>
+                </div>
+            </div>
+           <button type="button" class="course-button primary">Inscrever-se Agora</button>
+           <button type="button" class="course-button secondary">Solicitar Mais Informações</button>
         </div>
     </main>
     <footer>
-        <section id="info-footer">
-            <div class="top-footer">
+        <hr class="complete-line">
+        <section id="info-footer" class="container">
+            <div id="top-footer">
                 <h2 class="footer-title">EduTech Academy</h2>
                 <p class="footer-subtitle">Transformando carreiras através da educação de qualidade desde 2010.</p>
             </div>
-            
-            <div class="footer-contact">
-                <p id="footer-phone">📞 (11) 99999-9999</p>
-                <p id="footer-email">✉ contato@edutechacademy.com.br</p>
-                <p id="footer-local">📍 Av. Paulista, 1000 – São Paulo/SP</p>
+            <div id="footer-contact">
+                <h2 id="contact-title">Contato</h2>
+                <p id="footer-phone"><img src="/assets/phone.svg" alt="Telefone" width="16" height="16"> (11) 99999-9999</p>
+                <div class="phone-email">
+                    <p id="footer-email"><img src="/assets/mail.svg" alt="E-mail" width="16" height="16"> contato@edutechacademy.com.br</p>
+                    <p id="footer-local"><img src="/assets/map-pin.svg" alt="Local" width="16" height="16"> Av. Paulista, 1000 – São Paulo/SP</p>
+                </div>
             </div>
-            <div class="social-medias">
-                <p class="social-media">Facebook</p>
-                <p class="social-media">Instagram</p>
-                <p class="social-media">Twitter</p>
-                <p class="social-media">Linkedin</p>
-            </div>
-            <hr id="line">
-            <div class="copyright">
+            <div id="social-medias">
+                <h2 id="social-medias-title">Redes Sociais</h2>
+                <div class="medias">
+                    <a href="#" class="social-media"><img src="/assets/facebook.svg" alt="Facebook" width="24" height="24"></a>
+                    <a href="#" class="social-media"><img src="/assets/instagram.svg" alt="Instagram" width="24" height="24"></a>
+                    <a href="#" class="social-media"><img src="/assets/twitter.svg" alt="Twitter" width="24" height="24"></a>
+                    <a href="#" class="social-media"><img src="/assets/linkedin.svg" alt="Linkedin" width="24" height="24"></a>
+                </div>
+            </div> 
+            <hr id="soft-horizontal-line">
+            <div id="copyright">
                 <p id="footer-copyright">© 2025 EduTech Academy. Todos os direitos reservados.</p>
             </div>
         </section>
     </footer>
+    <button id="theme-toggle" aria-label="Alternar tema">
+        <img src="/assets/moon.svg" alt="Alternar tema" width="24" height="24">
+    </button>
     <script src="/js/script.js"></script>
 </body>
 </html>
