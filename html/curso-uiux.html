@@ -8,11 +8,17 @@
 </head>
 <body>
     <header>
-        <section id="header">
-            <h1 class="logo"><img src="/assets/logo.svg" alt="Logo EduTech" width="24" height="24"> EduTech Academy</h1>
+        <section id="header" class="container">
+            <div class="head">
+                <img id="logo-image" src="/assets/logo.svg" alt="Logo da EduTech Academy">
+                <h1 id="head-title">EduTech Academy</h1>
+            </div>
+            <button id="mobile-menu-btn" class="hamburger-menu" aria-label="Abrir menu" style="background: transparent; border: none; cursor: pointer;">
+                <img src="/assets/menu.svg" alt="Menu" width="32" height="32">
+            </button>
             <nav class="menu">
                 <ul>
-                    <li><a href="/index.html" class="button-menu">Home</a></li>
+                    <li><a href="index.html" class="button-menu">Home</a></li>
                     <li><a href="/html/cursos.html" class="button-menu">Cursos</a></li>
                     <li><a href="/index.html#matriculation" class="button-menu">Matrícula</a></li>
                     <li><a href="#" class="button-menu">Sobre</a></li>
@@ -22,19 +28,27 @@
         </section>
     </header>
     <main>
-        <section id="head-top">
-            <h2 class="header-title">UX/UI Design</h2>
-            <p class="header-subtitle">Desenvolva habilidades em design de interfaces e experiência do usuário.
-                                       Aprenda Figma, princípios de design, prototipagem, pesquisa com usuários e
-                                       como criar interfaces intuitivas e atraentes para diversos dispositivos.</p>
+        <hr id="horizontal-line">
+        <section id="head-top" class="container">
+            <a href="cursos.html" class="back-button">
+                <img src="/assets/arrow-left.svg" alt="Voltar" width="16" height="16"> Voltar para Cursos
+            </a>
+            <img src="/assets/ux-design.jpg" alt="UX/UI Design" style="border-radius: 0.75rem; max-width: 100%;">
+            <div>
+                <h2 class="h2-title">UX/UI Design</h2>
+                <p class="p-subtitle">Desenvolva habilidades em design de interfaces e experiência do usuário.
+                                    Aprenda Figma, princípios de design, prototipagem, pesquisa com usuários e
+                                    como criar interfaces intuitivas e atraentes para diversos dispositivos.</p>
+            
+            </div>
             <div class="what-studies">
                 <h2 class="wha-title">O que você vai aprender:</h2>
                 <ul>
-                    <li class="techniques">Fundamentos teóricos e práticos essenciais</li>
-                    <li class="techniques">Tecnologias e ferramentas atuais do mercado</li>
-                    <li class="techniques">Desenvolvimento de projetos reais</li>
-                    <li class="techniques">Metodologias ágeis e colaborativas</li>
-                    <li class="techniques">Preparação para o mercado de trabalho</li>
+                    <li class="techniques container">Fundamentos teóricos e práticos essenciais</li>
+                    <li class="techniques container">Tecnologias e ferramentas atuais do mercado</li>
+                    <li class="techniques container">Desenvolvimento de projetos reais</li>
+                    <li class="techniques container">Metodologias ágeis e colaborativas</li>
+                    <li class="techniques container">Preparação para o mercado de trabalho</li>
                 </ul>
             </div>
         </section>
