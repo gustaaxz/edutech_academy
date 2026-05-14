@@ -74,33 +74,33 @@
                 </div>
             </div>
         </section>
-        <section id="matriculation">
+        <section id="matriculation" class="container">
             <h2 class="form-title">Matrícula</h2>
-            <p class="form-subtitle">Formulário de Matrícula</p>
             <form id="matriculation-form">
+                <p class="form-subtitle">Formulário de Matrícula</p>
                 <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <label for="nome">Nome Completo *</label>
+                    <input class="input-placeholder" type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                     <span class="error-message" style="display: none;">Por favor, preencha o nome completo.</span>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email *</label>
+                    <input class="input-placeholder" type="email" id="email" name="email" placeholder="Digite seu email" required>
                     <span class="error-message" style="display: none;">Informe um e-mail válido.</span>
                 </div>
                 <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone" required>
+                    <label for="telefone">Telefone *</label>
+                    <input class="input-placeholder" type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
                     <span class="error-message" style="display: none;">Informe o número de telefone.</span>
                 </div>
                 <div class="form-group">
-                    <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" required>
+                    <label for="cpf">CPF *</label>
+                    <input class="input-placeholder" type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
                     <span class="error-message" style="display: none;">Informe o CPF corretamente.</span>
                 </div>
                 <div class="form-group">
-                    <label for="curso">Curso Desejado</label>
-                    <select id="curso" name="curso" required>
+                    <label for="curso">Curso Desejado *</label>
+                    <select class="input-placeholder" id="curso" name="curso" required>
                         <option value="">Selecione um curso</option>
                         <option value="fullstack">Desenvolvimento Web Fullstack</option>
                         <option value="datascience">Data Science & Machine Learning</option>
@@ -110,72 +110,79 @@
                     <span class="error-message" style="display: none;">Selecione um curso.</span>
                 </div>
                 <div class="form-group">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" required>
+                    <label for="cep">CEP *</label>
+                    <input class="input-placeholder" type="text" id="cep" name="cep" placeholder="00000-000" required>
                     <span class="error-message" style="display: none;">Informe o CEP corretamente.</span>
                 </div>
                 <div class="form-group">
-                    <label for="rua">Rua</label>
-                    <input type="text" id="rua" name="rua" required>
+                    <label for="rua">Rua *</label>
+                    <input class="input-placeholder" type="text" id="rua" name="rua" required>
                     <span class="error-message" style="display: none;">Informe a rua.</span>
                 </div>
                 <div class="form-group">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" name="bairro" required>
+                    <label for="bairro">Bairro *</label>
+                    <input class="input-placeholder" type="text" id="bairro" name="bairro" required>
                     <span class="error-message" style="display: none;">Informe o bairro.</span>
                 </div>
                 <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" required>
+                    <label for="cidade">Cidade *</label>
+                    <input class="input-placeholder" type="text" id="cidade" name="cidade" required>
                     <span class="error-message" style="display: none;">Informe a cidade.</span>
                 </div>
                 <div class="form-group">
-                    <label for="estado">Estado</label>
-                    <input type="text" id="estado" name="estado" required>
+                    <label for="estado">Estado *</label>
+                    <input class="input-placeholder" type="text" id="estado" name="estado" required>
                     <span class="error-message" style="display: none;">Informe o estado.</span>
                 </div>
-                <button type="submit" class="submit-button">Enviar Matrícula</button>
+                <button type="submit" id="submit-button">Enviar Matrícula</button>
             </form>
         </section>
-        <aside id="sidebar">
-            <h2>Áreas do Conhecimento</h2>
-            <ul>
-                <li>Tecnologia da Informação</li>
-                <li>Administração e Negócios</li>
-                <li>Marketing Digital</li>
-                <li>Design Gráfico</li>
-                <li>Engenharia</li>
-                <li>Saúde</li>
-                <li>Educação</li>
-                <li>Gastronomia</li>
-            </ul>
-        </aside>
+        <section id="sidebar">
+            <aside>
+                <h2>Áreas do Conhecimento</h2>
+                <p>Tecnologia da Informação</p>
+                <p>Administração e Negócios</p>
+                <p>Marketing Digital</p>
+                <p>Design Gráfico</p>
+                <p>Engenharia</p>
+                <p>Saúde</p>
+                <p>Educação</p>
+                <p>Gastronomia</p>
+            </aside>
+        </section>
     </main>
     <footer>
-        <section id="info-footer">
-            <div class="top-footer">
+        <hr id="complete-line">
+        <section id="info-footer" class="container">
+            <div id="top-footer">
                 <h2 class="footer-title">EduTech Academy</h2>
                 <p class="footer-subtitle">Transformando carreiras através da educação de qualidade desde 2010.</p>
             </div>
-            <div class="footer-contact">
-                <p id="footer-phone">📞 (11) 99999-9999</p>
-                <p id="footer-email">✉ contato@edutechacademy.com.br</p>
-                <p id="footer-local">📍 Av. Paulista, 1000 – São Paulo/SP</p>
+            <div id="footer-contact">
+                <h2 id="contact-title">Contato</h2>
+                <p id="footer-phone"><img src="/assets/phone.svg" alt="Telefone" width="16" height="16"> (11) 99999-9999</p>
+                <div class="phone-email">
+                    <p id="footer-email"><img src="/assets/mail.svg" alt="E-mail" width="16" height="16"> contato@edutechacademy.com.br</p>
+                    <p id="footer-local"><img src="/assets/map-pin.svg" alt="Local" width="16" height="16"> Av. Paulista, 1000 – São Paulo/SP</p>
+                </div>
             </div>
-            <div class="social-medias">
-                <a href="#" class="social-media"><img src="/assets/facebook.svg" alt="Facebook" width="24" height="24"></a>
-                <a href="#" class="social-media"><img src="/assets/instagram.svg" alt="Instagram" width="24" height="24"></a>
-                <a href="#" class="social-media"><img src="/assets/twitter.svg" alt="Twitter" width="24" height="24"></a>
-                <a href="#" class="social-media"><img src="/assets/linkedin.svg" alt="Linkedin" width="24" height="24"></a>
+            <div id="social-medias">
+                <h2 id="social-medias-title">Redes Sociais</h2>
+                <div class="medias">
+                    <a href="#" class="social-media"><img src="/assets/facebook.svg" alt="Facebook" width="24" height="24"></a>
+                    <a href="#" class="social-media"><img src="/assets/instagram.svg" alt="Instagram" width="24" height="24"></a>
+                    <a href="#" class="social-media"><img src="/assets/twitter.svg" alt="Twitter" width="24" height="24"></a>
+                    <a href="#" class="social-media"><img src="/assets/linkedin.svg" alt="Linkedin" width="24" height="24"></a>
+                </div>
             </div> 
-            <hr id="line">
-            <div class="copyright">
+            <hr id="soft-horizontal-line">
+            <div id="copyright">
                 <p id="footer-copyright">© 2025 EduTech Academy. Todos os direitos reservados.</p>
             </div>
         </section>
     </footer>
     <button id="theme-toggle" aria-label="Alternar tema">
-        <img src="/assets/sun.svg" alt="Alternar tema" width="24" height="24">
+        <img src="/assets/moon.svg" alt="Alternar tema" width="24" height="24">
     </button>
     <script src="/js/script.js"></script>
 </body>
