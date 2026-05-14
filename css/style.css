@@ -45,6 +45,10 @@ html {
     padding: 0.5rem 0 0.5rem 0;
 }
 
+#head-top {
+    margin-top: 1.75rem;
+}
+
 .head {
     display: flex;
     flex-direction: row;
@@ -107,11 +111,16 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0 2rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: #ddd;
     justify-self: center;
     width: 18rem;
-    /* Continuar a fazer os botões "Ver detalhes" em casa*/
+    color: white;
+    background-color: #2563eb;
+    text-decoration: none;
+    border-radius: 0.25rem;
 }
 
 #courses {
@@ -124,4 +133,150 @@ html {
     font-size: 1rem;
 }
 
-/* Continuar a fazer em casa (08/05/2026) */
+.course-infos {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-time, .course-local {
+    color: #a3a1a1;
+    font-weight: 200;
+    font-size: medium;
+}
+
+#matriculation-form {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #eee;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.input-placeholder {
+    padding: 0.5rem;
+    border: 2px solid #eee;
+    border-radius: 0.4rem;
+}
+
+#submit-button {
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.4rem 0 0.4rem 0;
+}
+
+.form-title {
+    margin: 3rem 0 2rem 0;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #eee;
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    margin: 5rem 1.25rem 0 1.25rem;
+    margin-bottom: 5rem;
+}
+
+#sidebar h2 {
+    font-size: medium;
+    padding-bottom: 1rem;
+}
+
+#sidebar p {
+    display: flex;
+    padding-bottom: 0.4rem;
+}
+
+#complete-line {
+    margin-bottom: 2rem;
+    border: none;
+    height: 1px;
+    background-color: #eee;
+}
+
+#info-footer {
+    text-align: center;
+}
+
+#top-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    font-size: small;
+}
+
+.footer-subtitle {
+    color: #a3a1a1
+}
+
+#footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    font-size: small;
+}
+
+#footer-phone, #footer-email, #footer-local {
+    color: #a3a1a1
+}
+
+#social-medias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    font-size: small;
+}
+
+.medias {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#soft-horizontal-line {
+    margin-bottom: 2rem;
+    border: none;
+    height: 1px;
+    background-color: #eee;
+}
+
+#copyright {
+    color: #a3a1a1;
+    font-size: small;
+    margin-bottom: 2rem;
+}
+
+body > #theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+body > #theme-toggle img {
+    filter: brightness(0) invert(1);
+}
