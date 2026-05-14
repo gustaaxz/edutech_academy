@@ -198,7 +198,7 @@ html {
     padding-bottom: 0.4rem;
 }
 
-#complete-line {
+.complete-line {
     margin-bottom: 2rem;
     border: none;
     height: 1px;
@@ -297,5 +297,103 @@ body > #theme-toggle img {
 }
 
 .back-button:hover {
+    background-color: #f9f9f9;
+}
+
+.course-informations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    font-size: 0.97rem;
+}
+
+.what-studies {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.what-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;;
+}
+
+.what-studies ul {
+    margin-left: 1rem;
+}
+
+.techniques {
+    font-size: 1rem;
+}
+
+.uiux-course {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #eee;
+    border-radius: 0.5rem;
+    margin: 0 1.4rem 5rem 1.4rem;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    background-color: #fff;
+}
+
+.course-detail-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.course-detail-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-information {
+    font-family: "Inter", sans-serif;
+    color: #888;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.course-subscription {
+    font-family: "Inter", sans-serif;
+    color: #1E1E1E;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+.course-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+}
+
+.course-button.primary {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+}
+
+.course-button.primary:hover {
+    background-color: #1d4ed8;
+}
+
+.course-button.secondary {
+    background-color: #fff;
+    color: #1E1E1E;
+    border: 1px solid #ddd;
+}
+
+.course-button.secondary:hover {
     background-color: #f9f9f9;
 }
