@@ -117,8 +117,6 @@ html {
 #fullstack-course, #data-science, #digital-marketing, #uiux-design {
     border: solid 2px var(--border-color);
     border-radius: 0.4rem;
-    display: flex;
-    flex-direction: column;
 }
 
 #fullstack-course a, #data-science a, #digital-marketing a, #uiux-design a {
@@ -126,10 +124,10 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 0.5rem 0 0.5rem 0;
-    margin-top: auto;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     background-color: #ddd;
-    align-self: center;
+    justify-self: center;
     width: 18rem;
     color: white;
     background-color: var(--primary-color);
