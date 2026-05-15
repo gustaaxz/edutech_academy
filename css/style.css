@@ -7,35 +7,30 @@
 }
 
 :root {
-    /* Cores - Modo Claro */
-    --bg-color: #F9F9F9; /* Fundo da página (body) */
-    --text-color: #1E1E1E; /* Texto padrão */
-    --primary-color: #0077CC; /* Cor principal (botões, links) */
-    --card-bg: #FFFFFF; /* Fundo do card/caixa */
-    --hover-color: #005FA3; /* Hover em links/botões */
-    --border-color: #E0E0E0; /* Bordas e divisores */
+    --bg-color: #F9F9F9;
+    --text-color: #1E1E1E;
+    --primary-color: #0077CC;
+    --card-bg: #FFFFFF;
+    --hover-color: #005FA3;
+    --border-color: #E0E0E0;
 
-    /* Cores - Modo Escuro */
-    --dark-bg-color: #020817; /* Fundo da página (body) */
-    --dark-text-color: #F9F9F9; /* Texto claro (padrão) */
-    --dark-primary-color: #4DA6FF; /* Cor principal (botões, links) */
-    --dark-card-bg: #2C2C2C; /* Fundo do card/caixa */
-    --dark-hover-color: #66BFFF; /* Hover em links/botões */
-    --dark-border-color: #444444; /* Bordas e divisores */
+    --dark-bg-color: #020817;
+    --dark-text-color: #F9F9F9;
+    --dark-primary-color: #4DA6FF;
+    --dark-card-bg: #2C2C2C;
+    --dark-hover-color: #66BFFF;
+    --dark-border-color: #444444;
 
-    /* Tipografia */
-    --font-heading: 'Poppins', sans-serif; /* Títulos (h1, h2, h3...) */
-    --font-body: 'Inter', sans-serif; /* Corpo de texto padrão */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
 }
 
-/* Configuração base do body para usar as variáveis e ter transição suave */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Quando o body tiver a classe modo-escuro, trocamos os valores das variáveis */
 body.modo-escuro {
     --bg-color: var(--dark-bg-color);
     --text-color: var(--dark-text-color);
@@ -182,6 +177,7 @@ html {
     border: 2px solid var(--border-color);
     border-radius: 0.4rem;
     background-color: var(--bg-color);
+    color: var(--text-color)
 }
 
 #submit-button {
@@ -278,7 +274,30 @@ html {
     margin-bottom: 2rem;
 }
 
-body > #theme-toggle {
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle img {
+    filter: brightness(0) invert(1);
+}
+
+body.modo-escuro .theme-toggle img {
+    filter: brightness(0) invert(0);
+}
+
+.floating-theme-toggle {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
@@ -293,9 +312,14 @@ body > #theme-toggle {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-body > #theme-toggle img {
+.floating-theme-toggle:hover {
+    background-color: var(--hover-color);
+}
+
+.floating-theme-toggle img {
     filter: brightness(0) invert(1);
 }
 
@@ -420,7 +444,7 @@ body > #theme-toggle img {
     background-color: #f9f9f9;
 }
 
-#head-top > img {
+#head-top img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -435,7 +459,6 @@ body > #theme-toggle img {
 }
 
 @media (min-width: 1024px){
-    /* Header & Menu Nav */
     .menu {
         display: block;
     }
@@ -458,18 +481,17 @@ body > #theme-toggle img {
     .hamburger-menu {
         display: none;
     }
-    .menu ul li button#theme-toggle {
+    .menu ul li button.theme-toggle {
         background: transparent;
         border: none;
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    body > #theme-toggle {
+    .floating-theme-toggle {
         display: none;
     }
 
-    /* Courses Grid */
     div#courses {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -477,7 +499,6 @@ body > #theme-toggle img {
         width: 80%;
     }
 
-    /* Home Layout (Matrícula + Sidebar) */
     body:has(#matriculation) main {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -485,29 +506,28 @@ body > #theme-toggle img {
         max-width: 90%;
         margin: 0 auto;
     }
-    body:has(#matriculation) main > #horizontal-line {
+    body:has(#matriculation) main #horizontal-line {
         grid-column: 1 / -1;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
     }
-    body:has(#matriculation) main > #head-top,
-    body:has(#matriculation) main > section#courses {
+    body:has(#matriculation) main #head-top,
+    body:has(#matriculation) main section#courses {
         grid-column: 1 / -1;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
     }
-    body:has(#matriculation) main > #matriculation {
+    body:has(#matriculation) main #matriculation {
         grid-column: 1;
         max-width: 100%;
         margin: 1rem 0 5rem 0;
     }
-    body:has(#matriculation) main > #sidebar {
+    body:has(#matriculation) main #sidebar {
         grid-column: 2;
         margin: 3rem 0 5rem 0;
     }
 
-    /* Course Internal Pages Layout */
     body:has(.uiux-course) main {
         display: grid;
         grid-template-columns: 1fr 350px;
@@ -515,41 +535,40 @@ body > #theme-toggle img {
         max-width: 90%;
         margin: 0 auto;
     }
-    body:has(.uiux-course) main > #horizontal-line {
+    body:has(.uiux-course) main #horizontal-line {
         grid-column: 1 / -1;
         grid-row: 1;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
     }
-    body:has(.uiux-course) main > #head-top {
+    body:has(.uiux-course) main #head-top {
         display: contents;
     }
-    body:has(.uiux-course) main > #head-top > .back-button {
+    body:has(.uiux-course) main #head-top .back-button {
         grid-column: 1 / -1;
         grid-row: 2;
         margin-top: 1.75rem;
         justify-self: start;
     }
-    body:has(.uiux-course) main > #head-top > img {
+    body:has(.uiux-course) main #head-top img {
         grid-column: 1;
         grid-row: 3;
         height: 380px;
     }
-    body:has(.uiux-course) main > #head-top > .course-informations {
+    body:has(.uiux-course) main #head-top .course-informations {
         grid-column: 1;
         grid-row: 4;
     }
-    body:has(.uiux-course) main > #head-top > .what-studies {
+    body:has(.uiux-course) main #head-top .what-studies {
         grid-column: 1;
         grid-row: 5;
     }
-    body:has(.uiux-course) main > .uiux-course {
+    body:has(.uiux-course) main .uiux-course {
         grid-column: 2;
         grid-row: 3 / span 3;
         margin: 0 0 5rem 0;
     }
 
-    /* Footer Layout */
     #info-footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

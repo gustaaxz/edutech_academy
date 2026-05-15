@@ -7,6 +7,11 @@
     <title>EduTech Academy</title>
 </head>
 <body>
+    <script>
+        if (localStorage.getItem('modo-escuro') === 'true') {
+            document.body.classList.add('modo-escuro');
+        }
+    </script>
     <header>
         <section id="header" class="container">
             <div class="head">
@@ -22,7 +27,8 @@
                     <li><a href="/html/cursos.html" class="button-menu">Cursos</a></li>
                     <li><a href="/index.html#matriculation" class="button-menu">Matrícula</a></li>
                     <li><a href="#" class="button-menu">Sobre</a></li>
-                    <li><button id="theme-toggle" aria-label="Alternar tema"><img src="/assets/sun.svg" alt="Alternar tema" width="24" height="24"></button></li>
+                    <li><button id="theme-toggle-header" class="theme-toggle" aria-label="Alternar tema">
+                        <img src="/assets/sun.svg" alt="Alternar tema" width="24" height="24"></button></li>
                 </ul>
             </nav>
         </section>
@@ -81,22 +87,22 @@
                 <div class="form-group">
                     <label for="nome">Nome Completo *</label>
                     <input class="input-placeholder" type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-                    <span class="error-message" style="display: none;">Por favor, preencha o nome completo.</span>
+                    <span id="error-name" class="error-message" style="display: none; color: rgb(219, 1, 1)">Por favor, preencha o nome completo.</span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email *</label>
                     <input class="input-placeholder" type="email" id="email" name="email" placeholder="Digite seu email" required>
-                    <span class="error-message" style="display: none;">Informe um e-mail válido.</span>
+                    <span id="error-email" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe um e-mail válido.</span>
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone *</label>
                     <input class="input-placeholder" type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
-                    <span class="error-message" style="display: none;">Informe o número de telefone.</span>
+                    <span id="error-telefone" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe o número de telefone.</span>
                 </div>
                 <div class="form-group">
                     <label for="cpf">CPF *</label>
                     <input class="input-placeholder" type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
-                    <span class="error-message" style="display: none;">Informe o CPF corretamente.</span>
+                    <span id="error-cpf" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe o CPF corretamente.</span>
                 </div>
                 <div class="form-group">
                     <label for="curso">Curso Desejado *</label>
@@ -107,32 +113,32 @@
                         <option value="marketing">Marketing Digital & SEO</option>
                         <option value="uiux">UI/UX Design</option>
                     </select>
-                    <span class="error-message" style="display: none;">Selecione um curso.</span>
+                    <span id="error-course" class="error-message" style="display: none; color: rgb(219, 1, 1)">Selecione um curso.</span>
                 </div>
                 <div class="form-group">
                     <label for="cep">CEP *</label>
                     <input class="input-placeholder" type="text" id="cep" name="cep" placeholder="00000-000" required>
-                    <span class="error-message" style="display: none;">Informe o CEP corretamente.</span>
+                    <span id="error-cep" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe o CEP corretamente.</span>
                 </div>
                 <div class="form-group">
                     <label for="rua">Rua *</label>
                     <input class="input-placeholder" type="text" id="rua" name="rua" required>
-                    <span class="error-message" style="display: none;">Informe a rua.</span>
+                    <span id="error-rua" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe a rua.</span>
                 </div>
                 <div class="form-group">
                     <label for="bairro">Bairro *</label>
                     <input class="input-placeholder" type="text" id="bairro" name="bairro" required>
-                    <span class="error-message" style="display: none;">Informe o bairro.</span>
+                    <span id="error-bairro" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe o bairro.</span>
                 </div>
                 <div class="form-group">
                     <label for="cidade">Cidade *</label>
                     <input class="input-placeholder" type="text" id="cidade" name="cidade" required>
-                    <span class="error-message" style="display: none;">Informe a cidade.</span>
+                    <span id="error-cidade" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe a cidade.</span>
                 </div>
                 <div class="form-group">
                     <label for="estado">Estado *</label>
                     <input class="input-placeholder" type="text" id="estado" name="estado" required>
-                    <span class="error-message" style="display: none;">Informe o estado.</span>
+                    <span id="error-estado" class="error-message" style="display: none; color: rgb(219, 1, 1)">Informe o estado.</span>
                 </div>
                 <button type="submit" id="submit-button">Enviar Matrícula</button>
             </form>
@@ -181,7 +187,7 @@
             </div>
         </section>
     </footer>
-    <button id="theme-toggle" aria-label="Alternar tema">
+    <button id="theme-toggle-floating" class="floating-theme-toggle" aria-label="Alternar tema">
         <img src="/assets/moon.svg" alt="Alternar tema" width="24" height="24">
     </button>
     <script src="/js/script.js"></script>

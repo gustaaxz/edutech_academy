@@ -7,6 +7,11 @@
     <title>EduTech Academy</title>
 </head>
 <body>
+    <script>
+        if (localStorage.getItem('modo-escuro') === 'true') {
+            document.body.classList.add('modo-escuro');
+        }
+    </script>
     <header>
         <section id="header" class="container">
             <div class="head">
@@ -22,7 +27,7 @@
                     <li><a href="/html/cursos.html" class="button-menu">Cursos</a></li>
                     <li><a href="/index.html#matriculation" class="button-menu">Matrícula</a></li>
                     <li><a href="#" class="button-menu">Sobre</a></li>
-                    <li><button id="theme-toggle" aria-label="Alternar tema"><img src="/assets/sun.svg" alt="Alternar tema" width="24" height="24"></button></li>
+                    <li><button class="theme-toggle header-theme-toggle" aria-label="Alternar tema"><img src="/assets/sun.svg" alt="Alternar tema" width="24" height="24"></button></li>
                 </ul>
             </nav>
         </section>
@@ -105,7 +110,7 @@
             </div>
         </section>
     </footer>
-    <button id="theme-toggle" aria-label="Alternar tema">
+    <button class="theme-toggle floating-theme-toggle" aria-label="Alternar tema">
         <img src="/assets/moon.svg" alt="Alternar tema" width="24" height="24">
     </button>
     <script src="/js/script.js"></script>
