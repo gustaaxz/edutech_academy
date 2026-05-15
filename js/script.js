@@ -18,14 +18,27 @@ themeToggles.forEach(toggle => {
         body.classList.toggle("modo-escuro");
         const modoEscuroAtivo = body.classList.contains("modo-escuro");
         localStorage.setItem('modo-escuro', modoEscuroAtivo);
+        
+        const icone = toggle.querySelector("img");
+        if (icone) {
+            icone.src = modoEscuroAtivo ? "/assets/sun.svg" : "/assets/moon.svg";
+        }
     });
 });
  
 const temaRecuperado = localStorage.getItem('modo-escuro');
- 
-if (temaRecuperado === 'true') {
+const isModoEscuro = temaRecuperado === 'true';
+
+if (isModoEscuro) {
     body.classList.add('modo-escuro');
 }
+
+themeToggles.forEach(toggle => {
+    const icone = toggle.querySelector("img");
+    if (icone) {
+        icone.src = isModoEscuro ? "/assets/sun.svg" : "/assets/moon.svg";
+    }
+});
  
 const campos_validacao = [
     { id: 'nome', error_id: 'error-name', mensagem: 'Por favor, preencha o nome completo' },

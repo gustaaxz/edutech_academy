@@ -1,67 +1,74 @@
-# EduTech Academy
+# 🎓 EduTech Academy
 
-EduTech Academy é um projeto de um site educacional responsivo que oferece informações sobre diversos cursos de tecnologia e design. O projeto foi desenvolvido com foco em acessibilidade, usabilidade e design moderno, apresentando recursos como alternância de tema (claro/escuro) e um menu de navegação responsivo.
+> Plataforma educacional responsiva e interativa oferecendo cursos na área de tecnologia e design.
 
-## Funcionalidades 🚀
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-* **Navegação Responsiva:** Menu hambúrguer para dispositivos móveis, garantindo uma boa experiência do usuário em todas as telas.
-* **Modo Claro/Escuro (Dark Mode):** Alternância de temas com persistência da preferência do usuário (utilizando classes CSS dinâmicas).
-* **Página Inicial Dinâmica:** Apresentação da plataforma e atalhos rápidos na barra lateral e cabeçalho.
-* **Páginas de Cursos Detalhadas:** Páginas dedicadas para cada curso oferecido (Data Science, Marketing, UI/UX Design, Desenvolvimento Web Full Stack).
-* **Organização Modular:** Estrutura de diretórios bem definida para HTML, CSS, JavaScript e assets (imagens e ícones).
+---
 
-## Estrutura do Projeto 📁
+## 📌 Sobre o Projeto
 
-A estrutura de arquivos do projeto está organizada da seguinte forma:
+**EduTech Academy** é um projeto prático de desenvolvimento front-end com o objetivo de construir uma plataforma de cursos online. A interface foi projetada com foco em **acessibilidade**, **usabilidade** e **design responsivo**, garantindo uma navegação fluida desde dispositivos móveis até desktops. 
+
+O projeto conta com páginas dinâmicas, validação de formulários inteligente e integração com APIs externas.
+
+## 🚀 Funcionalidades em Destaque
+
+- 🌗 **Dark Mode Persistente:** Alternância de tema claro/escuro com salvamento de preferência do usuário via `LocalStorage`.
+- 📱 **Design Responsivo:** Menu hambúrguer interativo e layouts que se adaptam perfeitamente a smartphones, tablets e desktops utilizando Media Queries.
+- 📬 **Integração ViaCEP:** Formulário de matrícula com preenchimento automático de endereço a partir da busca do CEP utilizando a API pública ViaCEP.
+- ✅ **Validação de Formulário:** Validação customizada em JavaScript para garantir dados corretos antes do envio, com feedback visual em tempo real.
+- 📚 **Catálogo de Cursos:** Páginas exclusivas para cada área de estudo, como Data Science, Marketing, UI/UX Design e Desenvolvimento Web Full Stack.
+
+## 📁 Estrutura do Projeto
 
 ```text
 conteudo-atividade/
+├── 📄 index.html                  # Página inicial principal
+├── 📄 README.md                   # Documentação do projeto
+├── 📄 Conteúdo Textual.pdf        # Material de apoio com os textos dos cursos
 │
-├── index.html                  # Página inicial do site
-├── README.md                   # Documentação do projeto
-├── Conteúdo Textual.pdf        # Arquivo de apoio com textos utilizados no projeto
+├── 📂 css/
+│   └── 🎨 style.css               # Folha de estilos principal e variáveis CSS (Design System)
 │
-├── css/
-│   └── style.css               # Folha de estilos global e variáveis CSS
+├── 📂 html/                       # Páginas detalhadas
+│   ├── 📄 cursos.html             # Listagem geral
+│   ├── 📄 curso-datascience.html  # Data Science
+│   ├── 📄 curso-marketing.html    # Marketing
+│   ├── 📄 curso-uiux.html         # UI/UX Design
+│   └── 📄 curso-web.html          # Dev Web Full Stack
 │
-├── html/                       # Páginas internas
-│   ├── cursos.html             # Página de listagem de cursos
-│   ├── curso-datascience.html  # Detalhes do curso de Data Science
-│   ├── curso-marketing.html    # Detalhes do curso de Marketing
-│   ├── curso-uiux.html         # Detalhes do curso de UI/UX Design
-│   └── curso-web.html          # Detalhes do curso de Desenvolvimento Web
+├── 📂 js/
+│   └── ⚙️ script.js               # Lógica de validações, API ViaCEP e persistência de tema
 │
-├── js/
-│   └── script.js               # Lógica do menu responsivo e dark mode
-│
-└── assets/                     # Imagens, ícones (SVG) e screenshots das telas
-    ├── *.jpg, *.png            # Imagens dos cursos
-    └── *.svg                   # Ícones da interface (sol, lua, menu, etc.)
+└── 📂 assets/                     # Recursos visuais (Imagens e Vetores SVG)
 ```
 
-## Tecnologias Utilizadas 🛠️
+## 🛠️ Tecnologias e Ferramentas
 
-* **HTML5:** Marcação semântica para estruturação do conteúdo.
-* **CSS3:** Estilização, Flexbox, variáveis customizadas (Custom Properties) para definição de temas (claro/escuro).
-* **JavaScript (Vanilla):** Manipulação do DOM para a funcionalidade do menu mobile e alternância do botão de temas.
-* **Arquivos SVG:** Ícones vetoriais leves e escaláveis para a interface de usuário.
+* **[HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)** - Semântica estrutural e acessibilidade.
+* **[CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)** - Estilizações nativas, Flexbox, media queries e variáveis customizadas (Custom Properties).
+* **[JavaScript (Vanilla)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)** - Manipulação de DOM, consumo de APIs (Fetch API), assincronicidade (Async/Await) e armazenamento local (LocalStorage).
+* **[ViaCEP](https://viacep.com.br/)** - Serviço externo para busca e validação de CEPs brasileiros.
 
-## Como Executar o Projeto 💻
+## 💻 Como Executar o Projeto Localmente
 
-Como este é um projeto estático baseado em HTML, CSS e JS puro, você não precisa de nenhuma configuração de servidor complexa para rodá-lo localmente.
+O projeto não depende de bibliotecas externas ou frameworks complexos, sendo um desenvolvimento **Vanilla** nativo para navegadores.
 
-1. **Clone ou baixe** este diretório para o seu computador.
-2. Navegue até a pasta do projeto (`conteudo-atividade`).
-3. Dê um duplo clique no arquivo `index.html` para abri-lo no seu navegador padrão.
-   * _Opcional:_ Para uma melhor experiência de desenvolvimento, você pode usar a extensão "Live Server" do VS Code ou qualquer servidor HTTP local simples.
+1. **Clone o repositório** ou baixe o arquivo `.zip`.
+   ```bash
+   git clone https://github.com/gustaaxz/edutech_academy.git
+   ```
+2. **Navegue até o diretório** do projeto:
+   ```bash
+   cd conteudo-atividade
+   ```
+3. **Abra o arquivo principal**:
+   Dê um duplo clique no arquivo `index.html` ou abra-o em seu navegador preferido.
 
-## Funcionalidades em Destaque 🌟
-
-### Dark Mode
-A alternância entre o modo claro e escuro é gerenciada através de variáveis CSS no arquivo `style.css`. O JavaScript altera uma classe global e troca os ícones correspondentes (sol/lua) no cabeçalho interativo.
-
-### Menu Mobile
-Em telas menores, o menu de navegação tradicional é adaptado usando media queries, garantindo uma navegação acessível e com boa usabilidade em smartphones e tablets.
+> **💡 Dica:** Para uma melhor experiência durante o desenvolvimento, recomenda-se o uso da extensão **Live Server** no VS Code.
 
 ---
-Desenvolvido como projeto prático de UI/UX e Desenvolvimento Web focado em boas práticas de design e desenvolvimento front-end.
+*Projeto concebido para aprofundamento prático em Design de Interfaces e Desenvolvimento Front-End Web.*
